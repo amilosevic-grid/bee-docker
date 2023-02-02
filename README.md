@@ -54,7 +54,7 @@ mv {beeutilities_folder or beeCore_folder}/target/scala_2.12/*.jar bee
 
 In order to start bee, you can run the following command from the repository root:
 
-`docker run --network Kafka_default -p 4040:4040 -v $HOME/bee-docker/bee:/bee -v $HOME/bee-docker/conf:/conf -v $HOME/bee-docker/data:/data -it apache/spark /bin/bash`
+`docker run (optional if running with kafka) --network kafka_default -p 4040:4040 -v $HOME/bee-docker/bee:/bee -v $HOME/bee-docker/conf:/conf -v $HOME/bee-docker/data:/data -it apache/spark /bin/bash`
 
 This will put you on a shell inside a docker container. You can `cd` your way to the root, and from there call `bash submit_bee.sh hello.conf`
 
@@ -68,7 +68,7 @@ Inside the container all the regular Kafka CLI commands are available, as well a
 ### Using Hbase with Bee
 
 You can use HBase after building the base image by running `docker build -t my-hbase .` inside of the hbase folder.
-After that you can run the image by running the following command `docker run -it --network kafka_default -p 2181:2181 -p 2888:2888 -p 3888:3888 -p 16010:16010 -p 16000:16000 -p 16020:16020 -p 16030:16030 -p 8080:8080  my-hbase`
+After that you can run the image by running the following command `docker run -it (optional if running with kafka) --network kafka_default -p 2181:2181 -p 2888:2888 -p 3888:3888 -p 16010:16010 -p 16000:16000 -p 16020:16020 -p 16030:16030 -p 8080:8080  my-hbase`
 
 #### Why is the network kafka_default?
 
