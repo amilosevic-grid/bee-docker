@@ -73,3 +73,9 @@ After that you can run the image by running the following command `docker run -i
 #### Why is the network kafka_default?
 
 In order for all containers to be able to communicate with each other, they have to be in the same internal network. Since Kafka is started from the folder kafka with `docker-compose up`, docker will create a network called kafka_default, where we will put all other services as well.
+
+### Tips & Limitations
+
+- ```--jars $(ls -d /bee/jars/* | tr '\n' ',')\``` can be used inside of the spark-submit to attach all the jars from bee/jars to the spark process.
+
+- Due to the implementation of the HBase Connection inside BeeUtilities, it is not currently possible to do streaming writes to HBase.
