@@ -1,0 +1,3 @@
+{"name": {"first": "Paul", "second": "Palul"},"Age": "25","Location": "USA","Address":{"longitude": -113.6335371,"latitude": 18.6789502,"postal_code": 90266,"code": "AA"}}
+{"name": {"first": "Mark", "second": "Mark"}, "Age": "26", "Location": "USA","Address":{"longitude": -110.2535371,"latitude": 22.1249502,"postal_code": 90276, "code": "BB"}}
+{"name": {"first": "John", "second": "John"}, "Age": "26", "Location": "USA","Address":{"longitude": -99.1235371,"latitude": 37.1049502,"postal_code": 90268, "code":"CC"}}

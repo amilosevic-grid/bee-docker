@@ -1,0 +1,5 @@
+<!ELEMENT configuration (property)>
+<!ELEMENT property (name,value,final)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT final (#PCDATA)>
