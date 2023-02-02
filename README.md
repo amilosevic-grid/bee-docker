@@ -5,7 +5,7 @@ This repository serves as a playground example of running Bee locally using dock
 # Prerequisites
 
 To run these images you require docker-desktop or the open-source rancher-desktop.
-So far it has been tested on Unix software; it should not behave much differently on Windows, except for the `get_parcel.sh`
+So far it has been tested on Unix software; it should not behave much differently on Windows, except for the `get_parcel.sh` which relies on some Unix commands to download the parcels. However, it should not be too hard to replicate the behaviour using wget for Windows.
 
 # Components
 
@@ -43,6 +43,14 @@ Note: the parcel tgz file is 7GB large, so it might take some time to download.
 An example of a script used to call a bee job.
 
 ## Run instructions
+
+Before running bee, we need to compile the fat jars of utilities and beeCore and put them inside the bee folder.
+```bash
+sbt clean
+sbt compile
+sbt assembly
+mv {beeutilities_folder or beeCore_folder}/target/scala_2.12/*.jar bee
+```
 
 In order to start bee, you can run the following command from the repository root:
 
